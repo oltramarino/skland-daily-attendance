@@ -62,4 +62,4 @@ jobs:
           SERVERCHAN_SENDKEY: ${{ secrets.SERVERCHAN_SENDKEY }}
           BARK_URL: ${{ secrets.BARK_URL }}
           SELECT_CHANNEL: ${{ secrets.SELECT_CHANNEL }}
-          HTTP_PROXY: 'socks5://127.0.0.1:40000'
+          ALL_PROXY: 'socks5://127.0.0.1:40000'
