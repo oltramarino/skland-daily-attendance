@@ -45,7 +45,7 @@ jobs:
       
       - name: Test WARP
         run: |
-          curl https://www.cloudflare.com/cdn-cgi/trace/
+          echo "$(curl https://www.cloudflare.com/cdn-cgi/trace/)"
         shell: bash
 
       - name: Run daily attendance
