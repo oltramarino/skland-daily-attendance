@@ -40,6 +40,11 @@ jobs:
 
       - name: Install WARP
         uses: boywithkeyboard/warp@v1
+      
+      - name: Test WARP
+        run: |
+          curl https://www.cloudflare.com/cdn-cgi/trace/
+        shell: bash
 
       - name: Run daily attendance
         run: pnpm attendance
