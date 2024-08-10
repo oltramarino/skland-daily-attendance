@@ -1,7 +1,7 @@
 import { createHash, createHmac } from 'node:crypto'
+import process from 'node:process'
 import { createFetch } from 'ofetch'
 import { ProxyAgent } from 'undici'
-
 
 export const command_header = {
   'User-Agent': 'Skland/1.5.1 (com.hypergryph.skland; build:100501001; Android 34; ) Okhttp/4.11.0',
@@ -45,6 +45,6 @@ export function getPrivacyName(name: string) {
 
 export const ofetch = createFetch({
   defaults: {
-    dispatcher: new ProxyAgent('http://127.0.0.1:7890')
+    dispatcher: new ProxyAgent(process.env.HTTP_PROXY)
   }
 })

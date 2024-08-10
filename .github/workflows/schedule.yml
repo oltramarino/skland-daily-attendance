@@ -39,6 +39,9 @@ jobs:
       - name: Install dependencies
         run: pnpm install
 
+      - name: Setup WARP
+        uses: boywithkeyboard/warp@v1
+
       - name: Run daily attendance
         run: pnpm attendance
         env:
@@ -46,3 +49,4 @@ jobs:
           SERVERCHAN_SENDKEY: ${{ secrets.SERVERCHAN_SENDKEY }}
           BARK_URL: ${{ secrets.BARK_URL }}
           SELECT_CHANNEL: ${{ secrets.SELECT_CHANNEL }}
+          HTTP_PROXY: 'https://127.0.0.1:40000'
