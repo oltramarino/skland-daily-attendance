@@ -41,7 +41,7 @@ jobs:
       - name: Install WARP
         uses: enpitsuLin/warp@v1.1.2
         with: 
-          mode: proxy
+          mode: warp+doh
       
       - name: Test WARP
         run: |
