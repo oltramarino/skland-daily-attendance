@@ -46,7 +46,6 @@ export function getPrivacyName(name: string) {
 
 export const ofetch = createFetch({
   defaults: {
-    //@ts-expect-error ignore
-    agent: new SocksProxyAgent(process.env.ALL_PROXY),
+    // agent: new SocksProxyAgent(process.env.ALL_PROXY),
   }
 })
