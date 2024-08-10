@@ -39,7 +39,9 @@ jobs:
         run: pnpm install
 
       - name: Install WARP
-        uses: boywithkeyboard/warp@v1
+        uses: enpitsuLin/warp@v1.0.0
+        with: 
+          mode: proxy
       
       - name: Test WARP
         run: |
