@@ -39,7 +39,7 @@ jobs:
         run: pnpm install
 
       - name: Install WARP
-        uses: enpitsuLin/warp@v1.1.0
+        uses: enpitsuLin/warp@v1.1.2
         with: 
           mode: proxy
       
