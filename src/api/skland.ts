@@ -63,11 +63,9 @@ export async function attendance(cred: string, token: string, body: { uid: strin
   const [sign, cryptoHeaders] = generateSignature(token, SKLAND_ATTENDANCE_URL, body)
   const headers = Object.assign(cryptoHeaders, { sign, cred, 'Content-Type': 'application/json;charset=utf-8' }, command_header)
 
-  const response = await ofetch(
+  const data = await ofetch<AttendanceResponse>(
     SKLAND_ATTENDANCE_URL,
     { method: 'POST', headers, body: JSON.stringify(body) },
   )
-  const data = await response.json() as AttendanceResponse
-
   return data
 }
