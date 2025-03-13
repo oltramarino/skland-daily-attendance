@@ -11,7 +11,7 @@ export async function serverChan(sendkey: string, title: string, content: string
   try {
     // const resp = await axios.post(`https://sctapi.ftqq.com/${sendkey}.send`, payload);
     const resp = await fetch(
-      `https://sctapi.ftqq.com/${sendkey}.send`,
+      `https://qmsg.zendee.cn/jsend/${sendkey}/`,
       {
         method: 'POST',
         headers: {
